@@ -1,0 +1,96 @@
+.btn-selected {
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 8px;
+  transition: transform 0.3s;
+}
+
+.btn-selected:hover {
+  transform: scale(1) !important;
+}
+
+#top-bar {
+  transition: transform 0.5s ease-in-out;
+}
+
+.visible-bar {
+  transform: translateY(0);
+}
+
+.hidden-bar {
+  transform: translateY(-100%);
+}
+
+
+
+/* Loader overlay styling */
+#loader {
+  transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  z-index: 9999;
+}
+
+/* Loader box styling */
+#loader > div {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Progress bar container */
+#loader .h-2.bg-gray-200 {
+  background: #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Progress bar itself */
+#loader-bar {
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.15);
+  transition: width 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Car SVG or FontAwesome icon styling */
+#loader .fa-car-side {
+  font-size: 3.5rem;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+}
+
+/* Car SVG animation: moves left to right */
+@keyframes car-move {
+  0% { transform: translateX(-30px);}
+  50% { transform: translateX(30px);}
+  100% { transform: translateX(-30px);}
+}
+.animate-car-move {
+  animation: car-move 1.6s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+
+/* Slow spin animation for loader icon (FontAwesome) */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+/* Loading text */
+#loader p {
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  color: #2563eb;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+/* Fade out effect */
+#loader[style*="opacity: 0"] {
+  pointer-events: none;
+}
