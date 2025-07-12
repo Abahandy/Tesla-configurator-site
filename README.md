@@ -32,7 +32,7 @@ A sleek, responsive Tesla Model Y configurator built using vanilla JavaScript, H
 ## 🌐 Live Demo
 
 🚀 [View Live Project](https://youtu.be/zyEr32uUuh0)  
-> *(Replace with your deployed link e.g., Netlify, Vercel, or GitHub Pages)*
+> 
 
 ---
 
